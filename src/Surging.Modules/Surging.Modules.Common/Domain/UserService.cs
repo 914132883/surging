@@ -6,10 +6,12 @@ using Surging.Core.CPlatform.EventBus.Implementation;
 using Surging.Core.CPlatform.Ioc;
 using Surging.Core.CPlatform.Transport.Implementation;
 using Surging.Core.CPlatform.Utilities;
+using Surging.Core.Dapper.Repositories;
 using Surging.Core.KestrelHttpServer;
 using Surging.Core.KestrelHttpServer.Internal;
 using Surging.Core.ProxyGenerator;
 using Surging.Core.Thrift.Attributes;
+using Surging.Hero.Auth.Domain.Users;
 using Surging.IModuleServices.Common;
 using Surging.IModuleServices.Common.Models;
 using Surging.IModuleServices.User;
@@ -27,15 +29,18 @@ namespace Surging.Modules.Common.Domain
     {
         #region Implementation of IUserService
         private readonly UserRepository _repository;
-        public UserService(UserRepository repository)
+        private readonly IDapperRepository<UserInfo, long> _userRepository;
+        public UserService(UserRepository repository, IDapperRepository<UserInfo, long> userRepository)
         {
             this._repository = repository;
+            this._userRepository = userRepository;
         }
 
         public async Task<string> GetUserName(int id)
         {
-            var text = await GetService<IManagerService>().SayHello("fanly"); 
-            return await Task.FromResult<string>(text);
+            var text = await GetService<IManagerService>().SayHello("fanly");
+            var userInfo = await _userRepository.GetAsync(id);
+            return await Task.FromResult<string>(text+userInfo.ChineseName);
         }
 
         public Task<bool> Exists(int id)

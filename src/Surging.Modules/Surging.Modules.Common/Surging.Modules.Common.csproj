@@ -25,6 +25,12 @@
     <ProjectReference Include="..\..\Surging.IModuleServices\Surging.IModuleServices.Common\Surging.IModuleServices.Common.csproj" />
     <ProjectReference Include="..\..\Surging.IModuleServices\Surging.IModuleServices.Manger\Surging.IModuleServices.Manager.csproj" />
     <ProjectReference Include="..\..\WebSocket\WebSocketCore\WebSocketCore.csproj" />
+    <ProjectReference Include="..\..\Surging.Core\Surging.Core.Dapper\Surging.Core.Dapper.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ClassMapper\" />
+    <Folder Include="Entity\" />
+    <Folder Include="Comm\" />
+  </ItemGroup>
 </Project>

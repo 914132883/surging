@@ -1,8 +1,8 @@
 {
   "Surging": {
-    "Ip": "${Surging_Server_IP}|127.0.0.1",
+    "Ip": "${Surging_Server_IP}|0.0.0.0",
     "WatchInterval": 30,
-    "Port": "${Surging_Server_Port}|981",
+    "Port": "${Surging_Server_Port}|9811",
     "MappingIp": "${Mapping_ip}",
     "MappingPort": "${Mapping_Port}",
     "Token": "true",
@@ -19,16 +19,21 @@
     "IsModulePerLifetimeScope": false,
     "ReloadOnChange": false,
     "Ports": {
-      "HttpPort": "${HttpPort}|281",
-      "WSPort": "${WSPort}|961",
-      "MQTTPort": "${MQTTPort}|971",
-      "GrpcPort": "${GrpcPort}|951"
+      "HttpPort": "${HttpPort}|2811",
+      "WSPort": "${WSPort}|9611",
+      "MQTTPort": "${MQTTPort}|9711",
+      "GrpcPort": "${GrpcPort}|9511"
     },
     "RequestCacheEnabled": false,
     "Packages": [
       {
         "TypeName": "EnginePartModule",
-        "Using": "${UseEngineParts}|ServiceProxyModule;ThriftModule;SerilogModule;NLogModule;MessagePackModule;ConsulModule;WSProtocolModule;MqttProtocolModule;EventBusRabbitMQModule;CachingModule;KestrelHttpModule;DnsProtocolModule;SwaggerModule;ApiGeteWayModule;SkywalkingModule;KestrelNLogModule;KestrelNLogModule;ServiceHostModule;GrpcModule;ApolloModule;"
+        //"Using": "${UseEngineParts}|ServiceProxyModule;ThriftModule;SerilogModule;NLogModule;MessagePackModule;ConsulModule;WSProtocolModule;MqttProtocolModule;EventBusRabbitMQModule;CachingModule;KestrelHttpModule;DnsProtocolModule;SwaggerModule;ApiGeteWayModule;SkywalkingModule;KestrelNLogModule;KestrelNLogModule;ServiceHostModule;GrpcModule;ApolloModule;",
+        "Using": "${UseEngineParts}|ServiceProxyModule;DotNettyModule;SerilogModule;NLogModule;MessagePackModule;ConsulModule;WSProtocolModule;MqttProtocolModule;EventBusRabbitMQModule;CachingModule;KestrelHttpModule;DnsProtocolModule;SwaggerModule;ApiGeteWayModule;SkywalkingModule;KestrelNLogModule;KestrelNLogModule;ServiceHostModule;GrpcModule;ApolloModule;"
+      },
+      {
+        "TypeName": "KestrelHttpModule",
+        "Using": "${UseKestrelHttpParts}|StageModule;SwaggerModule"
       }
     ]
   }, //如果引用多个同类型的组件，需要配置Packages，如果是自定义按需引用，无需配置Packages
@@ -70,8 +75,8 @@
         "Enable": true
       }
     ],
-    "HttpsPort": "${StageHttpsPorts}|449,446",
-    "HttpPorts": "${StageHttpPorts}|285,282,283"
+    "HttpsPort": "${StageHttpsPorts}|4491,4461",
+    "HttpPorts": "${StageHttpPorts}|2851,2821,2831"
   },
   "Dns": {
     "RootDnsAddress": "192.168.1.1",

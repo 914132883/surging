@@ -1,6 +1,6 @@
 {
   "Surging": {
-    "Ip": "${Surging_Server_IP}|127.0.0.1",
+    "Ip": "${Surging_Server_IP}|0.0.0.0",
     "WatchInterval": 30,
     "Port": 98,
     "MappingIp": "${Mapping_ip}",
@@ -16,7 +16,8 @@
     "Packages": [
       {
         "TypeName": "EnginePartModule",
-        "Using": "${UseEngineParts}|ThriftModule;NLogModule;MessagePackModule;ConsulModule;HttpProtocolModule;ServiceProxyModule;EventBusRabbitMQModule;SkywalkingModule;"
+        //"Using": "${UseEngineParts}|ThriftModule;NLogModule;MessagePackModule;ConsulModule;HttpProtocolModule;ServiceProxyModule;EventBusRabbitMQModule;SkywalkingModule;",
+        "Using": "${UseEngineParts}|DotNettyModule;NLogModule;MessagePackModule;ConsulModule;HttpProtocolModule;ServiceProxyModule;EventBusRabbitMQModule;SkywalkingModule;"
       }
     ]
   },
@@ -28,7 +29,7 @@
     "EnableChildrenMonitor": false
   },
   "EventBus": {
-    "EventBusConnection": "${EventBusConnection}|localhost",
+    "EventBusConnection": "${EventBusConnection}|127.0.0.1",
     "EventBusUserName": "guest",
     "EventBusPassword": "guest",
     "VirtualHost": "/",

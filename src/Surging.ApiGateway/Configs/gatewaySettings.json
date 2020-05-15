@@ -1,6 +1,7 @@
 {
   "AccessTokenExpireTimeSpan": "30",
-  "AuthorizationRoutePath": "api/user/authentication",
+  //"AuthorizationRoutePath": "api/user/authentication",
+  "AuthorizationRoutePath": "v1/api/account/login",
   "AuthorizationServiceKey": "User",
   "TokenEndpointPath": "api/oauth2/token",
   "CacheMode": "MemoryCache", //MemoryCache or  gateway.Redis save token

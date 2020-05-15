@@ -104,7 +104,7 @@ new Surging.IModuleServices.Common.Models.UserModel
         /// <param name="id">用户ID</param>
         /// <param name="model">用户模型</param>
         /// <returns></returns>
-        [Authorization(AuthType = AuthorizationType.JWT)]
+        [Authorization(AuthType = AuthorizationType.AppSecret)]
         [Command(Strategy = StrategyType.FallBack,FallBackName = "UpdateFallBackName",  RequestCacheEnabled = true, InjectionNamespaces = new string[] { "Surging.IModuleServices.Common" })]
         [InterceptMethod(CachingMethod.Remove, "GetUser_id_{0}", "GetUserName_name_{0}", CacheSectionType = SectionType.ddlCache, Mode = CacheTargetType.Redis)]
         Task<bool> Update(int id, UserModel model);

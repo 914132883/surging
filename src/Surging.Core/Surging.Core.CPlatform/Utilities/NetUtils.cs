@@ -1,4 +1,5 @@
-﻿using Surging.Core.CPlatform.Address;
+﻿using Microsoft.Extensions.Logging;
+using Surging.Core.CPlatform.Address;
 using System;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
@@ -51,12 +52,14 @@ namespace Surging.Core.CPlatform.Utilities
 
         public static string GetAnyHostAddress()
         {
+            Console.WriteLine("获取");
             string result = "";
             NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();
             foreach (NetworkInterface adapter in nics)
             {
                 if (adapter.NetworkInterfaceType == NetworkInterfaceType.Ethernet)
                 {
+                    Console.WriteLine("获取ip开始");
                     IPInterfaceProperties ipxx = adapter.GetIPProperties();
                     UnicastIPAddressInformationCollection ipCollection = ipxx.UnicastAddresses;
                     foreach (UnicastIPAddressInformation ipadd in ipCollection)
@@ -64,6 +67,7 @@ namespace Surging.Core.CPlatform.Utilities
                         if (ipadd.Address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
                         {
                             result = ipadd.Address.ToString();
+                            Console.WriteLine("得到ip"+ result);
                         }
                     }
                 }
@@ -73,9 +77,11 @@ namespace Surging.Core.CPlatform.Utilities
 
         public static string GetHostAddress(string hostAddress)
         {
+            Console.WriteLine("hostaddress:"+hostAddress);
             var result = hostAddress;
             if ((!IsValidAddress(hostAddress) && !IsLocalHost(hostAddress)) || IsAnyHost(hostAddress))
             {
+                Console.WriteLine("进入");
                 result = GetAnyHostAddress();
             }
             return result;
@@ -88,7 +94,9 @@ namespace Surging.Core.CPlatform.Utilities
             var ports = AppConfig.ServerOptions.Ports;
             string address = GetHostAddress(AppConfig.ServerOptions.Ip);
             int port = AppConfig.ServerOptions.Port;
-            var mappingIp = AppConfig.ServerOptions.MappingIP ?? address;
+            Console.WriteLine("address" + address);
+            var mappingIp = string.IsNullOrEmpty(AppConfig.ServerOptions.MappingIP) ? address : AppConfig.ServerOptions.MappingIP;
+            Console.WriteLine("mappingIp" + mappingIp);
             var mappingPort = AppConfig.ServerOptions.MappingPort;
             if (mappingPort == 0)
                 mappingPort = port;

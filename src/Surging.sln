@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28527.54
@@ -65,7 +65,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Surging.Core.System", "Surg
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Surging.Services.Client", "Surging.Services\Surging.Services.Client\Surging.Services.Client.csproj", "{5846D387-8371-4E49-97B7-2B5E688FC0FD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Surging.Services.Server", "Surging.Services\Surging.Services.Server\Surging.Services.Server.csproj", "{A8C605D7-3552-44D8-AD8D-4EA08B68CF33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Surging.Services.Server2", "Surging.Services\Surging.Services.Server2\Surging.Services.Server2.csproj", "{A8C605D7-3552-44D8-AD8D-4EA08B68CF33}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Surging.Core.Protocol.Mqtt", "Surging.Core\Surging.Core.Protocol.Mqtt\Surging.Core.Protocol.Mqtt.csproj", "{A0502179-D200-49AE-9897-A6B189A75B45}"
 EndProject
@@ -108,6 +108,16 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Surging.Core.Configuration.Apollo", "Surging.Core\Surging.Core.Configuration.Apollo\Surging.Core.Configuration.Apollo.csproj", "{FA1216E9-867C-4CAC-BFB5-0BDE8BC6CD2E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Surging.Core.Thrift", "Surging.Core\Surging.Core.Thrift\Surging.Core.Thrift.csproj", "{734B6128-C5E7-4746-B8B9-58B9798F9174}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Surging.Core.Dapper", "Surging.Core\Surging.Core.Dapper\Surging.Core.Dapper.csproj", "{38FFB7DB-B2F7-47D7-92DD-A82810509997}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Surging.Core.Domain", "Surging.Core\Surging.Core.Domain\Surging.Core.Domain.csproj", "{8A6ADE14-69EF-4A14-92C9-4B3A30F860E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Surging.Core.ElasticSearch", "Surging.Core\Surging.Core.ElasticSearch\Surging.Core.ElasticSearch.csproj", "{020359AF-AF3B-43E6-B985-A36FD70D4BE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Surging.Services.Server", "Surging.Services\Surging.Services.Server\Surging.Services.Server.csproj", "{6DC485C6-1FBB-4E4E-98F3-F008CEC4FE58}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "..\docker-compose\servers\docker-compose.dcproj", "{FEA0C318-FFED-4D39-8781-265718CA43DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -299,6 +309,26 @@ Global
 		{734B6128-C5E7-4746-B8B9-58B9798F9174}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{734B6128-C5E7-4746-B8B9-58B9798F9174}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{734B6128-C5E7-4746-B8B9-58B9798F9174}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38FFB7DB-B2F7-47D7-92DD-A82810509997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38FFB7DB-B2F7-47D7-92DD-A82810509997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38FFB7DB-B2F7-47D7-92DD-A82810509997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38FFB7DB-B2F7-47D7-92DD-A82810509997}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A6ADE14-69EF-4A14-92C9-4B3A30F860E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A6ADE14-69EF-4A14-92C9-4B3A30F860E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A6ADE14-69EF-4A14-92C9-4B3A30F860E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A6ADE14-69EF-4A14-92C9-4B3A30F860E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{020359AF-AF3B-43E6-B985-A36FD70D4BE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{020359AF-AF3B-43E6-B985-A36FD70D4BE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{020359AF-AF3B-43E6-B985-A36FD70D4BE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{020359AF-AF3B-43E6-B985-A36FD70D4BE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DC485C6-1FBB-4E4E-98F3-F008CEC4FE58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DC485C6-1FBB-4E4E-98F3-F008CEC4FE58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DC485C6-1FBB-4E4E-98F3-F008CEC4FE58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DC485C6-1FBB-4E4E-98F3-F008CEC4FE58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEA0C318-FFED-4D39-8781-265718CA43DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEA0C318-FFED-4D39-8781-265718CA43DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEA0C318-FFED-4D39-8781-265718CA43DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEA0C318-FFED-4D39-8781-265718CA43DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -348,6 +378,10 @@ Global
 		{6F45517A-4465-4F68-89B5-BB315EAD7CCD} = {E3ADE8DE-5F3A-4E76-B22F-2C9435AACA06}
 		{FA1216E9-867C-4CAC-BFB5-0BDE8BC6CD2E} = {E3ADE8DE-5F3A-4E76-B22F-2C9435AACA06}
 		{734B6128-C5E7-4746-B8B9-58B9798F9174} = {E3ADE8DE-5F3A-4E76-B22F-2C9435AACA06}
+		{38FFB7DB-B2F7-47D7-92DD-A82810509997} = {E3ADE8DE-5F3A-4E76-B22F-2C9435AACA06}
+		{8A6ADE14-69EF-4A14-92C9-4B3A30F860E7} = {E3ADE8DE-5F3A-4E76-B22F-2C9435AACA06}
+		{020359AF-AF3B-43E6-B985-A36FD70D4BE5} = {E3ADE8DE-5F3A-4E76-B22F-2C9435AACA06}
+		{6DC485C6-1FBB-4E4E-98F3-F008CEC4FE58} = {30ADB177-C82F-49A7-8FA7-C32996543C4A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9889BCDC-E6A6-448F-B01A-ECFD0FAF294C}
