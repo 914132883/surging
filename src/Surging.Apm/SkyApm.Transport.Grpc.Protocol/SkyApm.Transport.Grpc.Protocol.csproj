@@ -8,6 +8,7 @@
         <PackageTags>SkyWalking;Grpc</PackageTags>
         <TargetFramework>netstandard2.0</TargetFramework>
         <RootNamespace>SkyApm.Transport.Grpc.Protocol</RootNamespace>
+        <PackageVersion>3.0.0</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>

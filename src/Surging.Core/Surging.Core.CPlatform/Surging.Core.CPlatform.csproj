@@ -3,13 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
      <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-     <PackageId>surging</PackageId>
-     <Authors></Authors>
-     <PackageLicenseUrl>https://github.com/dotnetcore/surging/blob/master/LICENSE</PackageLicenseUrl>
-     <PackageProjectUrl>https://github.com/dotnetcore/surging</PackageProjectUrl>
      <PackageTags>MicroService surging</PackageTags>
-     <PackageReleaseNotes>1.multiple register center cluster
-2. fix bug</PackageReleaseNotes>
+     <PackageVersion>3.0.0</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>

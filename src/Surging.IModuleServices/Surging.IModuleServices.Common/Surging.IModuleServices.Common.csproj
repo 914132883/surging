@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
      <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-     <PackageId>测试模块</PackageId>
      <Description>测试</Description>
+     <PackageVersion>3.0.0</PackageVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
