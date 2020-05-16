@@ -1,7 +1,7 @@
 # surging的介绍 　　　　　　　　　　　　　
 
 ```
-                                                                                           作者：fanly 校对：fanly
+                                                                                           作者： 校对：
 ```
 
 什么是Surging

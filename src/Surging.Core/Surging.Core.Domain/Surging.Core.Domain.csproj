@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <PackageId>$(PackagePrefix).Domain</PackageId>
     <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
     <Description>封装领域设计组件</Description>
   </PropertyGroup>

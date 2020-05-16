@@ -90,7 +90,7 @@ namespace Surging.IModuleServices.Common
         [Command(Strategy = StrategyType.Injection, Injection = @"return
 new Surging.IModuleServices.Common.Models.UserModel
          {
-            Name=""fanly"",
+            Name="""",
             Age=19
          };", RequestCacheEnabled = true, InjectionNamespaces = new string[] { "Surging.IModuleServices.Common" })]
         [InterceptMethod(CachingMethod.Get, Key = "GetUser_id_{0}", CacheSectionType = SectionType.ddlCache, Mode = CacheTargetType.Redis, Time = 480)]

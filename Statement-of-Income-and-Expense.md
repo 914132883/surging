@@ -1,6 +1,6 @@
 # 收支明细表
 
-说明：为保证surging财务公开透明，决定将每一笔捐赠和支出记录于本表，资金由 [fanly](https://github.com/fanliang11) 托管，并且受社区人员监督用于surging的生态发展
+说明：为保证surging财务公开透明，决定将每一笔捐赠和支出记录于本表，资金由 [](https://github.com/fanliang11) 托管，并且受社区人员监督用于surging的生态发展
 
 
 ## 汇总

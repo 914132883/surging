@@ -43,7 +43,7 @@ Call in the following way:
 var user = ServiceLocator.GetService<IServiceProxyFactory>().CreateProxy<IUserService>("User");
 
 // Send request and await the response.
-Console.WriteLine(await user.SayHello("fanly"));
+Console.WriteLine(await user.SayHello(""));
 ```
 
 ## Next steps

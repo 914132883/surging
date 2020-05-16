@@ -208,7 +208,7 @@ AppSecret验证，接口方法添加以下特性：
 [Command(Strategy= StrategyType.Injection ,Injection = @"return 
 Task.FromResult(new Surging.IModuleServices.Common.Models.UserModel
          {
-            Name=""fanly"",
+            Name="""",
             Age=18
          });",InjectionNamespaces =new string[] { "Surging.IModuleServices.Common"})] 
 ```

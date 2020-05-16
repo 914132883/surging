@@ -5,10 +5,7 @@
         <Description>$(Product) gRPC data transmitter.</Description>
         <AssemblyTitle>$(PackagePrefix).Transport.Grpc.Protocol</AssemblyTitle>
         <AssemblyName>SkyApm.Transport.Grpc.Protocol</AssemblyName>
-        <PackageId>$(PackagePrefix).Transport.Grpc.Protocol</PackageId>
         <PackageTags>SkyWalking;Grpc</PackageTags>
-        <PackageReleaseNotes>
-        </PackageReleaseNotes>
         <TargetFramework>netstandard2.0</TargetFramework>
         <RootNamespace>SkyApm.Transport.Grpc.Protocol</RootNamespace>
     </PropertyGroup>

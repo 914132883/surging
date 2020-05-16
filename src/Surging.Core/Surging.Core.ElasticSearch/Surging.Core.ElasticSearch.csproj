@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <PackageId>$(PackagePrefix).ElasticSearch</PackageId>
     <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
   </PropertyGroup>
 

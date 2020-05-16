@@ -4,7 +4,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
      <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
      <PackageId>surging</PackageId>
-     <Authors>fanly</Authors>
+     <Authors></Authors>
      <PackageLicenseUrl>https://github.com/dotnetcore/surging/blob/master/LICENSE</PackageLicenseUrl>
      <PackageProjectUrl>https://github.com/dotnetcore/surging</PackageProjectUrl>
      <PackageTags>MicroService surging</PackageTags>

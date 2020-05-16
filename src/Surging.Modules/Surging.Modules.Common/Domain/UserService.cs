@@ -38,7 +38,7 @@ namespace Surging.Modules.Common.Domain
 
         public async Task<string> GetUserName(int id)
         {
-            var text = await GetService<IManagerService>().SayHello("fanly");
+            var text = await GetService<IManagerService>().SayHello("");
             var userInfo = await _userRepository.GetAsync(id);
             return await Task.FromResult<string>(text+userInfo.ChineseName);
         }
@@ -76,7 +76,7 @@ namespace Surging.Modules.Common.Domain
         {
             return Task.FromResult(new UserModel
             {
-                Name = "fanly",
+                Name = "",
                 Age = 18
             });
         }
@@ -125,7 +125,7 @@ namespace Surging.Modules.Common.Domain
 
         public Task<ApiResult<UserModel>> GetApiResult()
         {
-            return Task.FromResult(new ApiResult<UserModel>() { Value = new UserModel { Name = "fanly" }, StatusCode = 200 });
+            return Task.FromResult(new ApiResult<UserModel>() { Value = new UserModel { Name = "" }, StatusCode = 200 });
         }
 
         public async Task<bool> UploadFile(HttpFormCollection form1)

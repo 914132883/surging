@@ -25,7 +25,7 @@ namespace Surging.Modules.Common.Domain
 
        public async Task<bool> IsOnline(string deviceId)
         {
-            var text = await GetService<IManagerService>().SayHello("fanly");
+            var text = await GetService<IManagerService>().SayHello("");
             return  await base.GetDeviceIsOnine(deviceId);
         }
 

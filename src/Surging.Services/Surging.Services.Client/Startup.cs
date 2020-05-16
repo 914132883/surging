@@ -88,12 +88,12 @@ namespace Surging.Services.Client
                 var result= await  asyncProxy.AddAsync(1, 2);
                 var user = userProxy.GetUser(new UserModel {
                     UserId = 1,
-                    Name = "fanly",
+                    Name = "",
                     Age=120,
                      Sex=0
                 }).GetAwaiter().GetResult();
                 var e = userProxy.SetSex(Sex.Woman).GetAwaiter().GetResult();
-                var v = userProxy.GetUserId("fanly").GetAwaiter().GetResult();
+                var v = userProxy.GetUserId("").GetAwaiter().GetResult();
                 var fa = userProxy.GetUserName(1).GetAwaiter().GetResult();
                 userProxy.Try().GetAwaiter().GetResult();
                 var v1 = userProxy.GetUserLastSignInTime(1).Result;
@@ -102,13 +102,13 @@ namespace Surging.Services.Client
                 userProxy.PublishThroughEventBusAsync(new UserEvent
                 {
                     UserId = 1,
-                    Name = "fanly"
+                    Name = ""
                 }).Wait();
 
                 userProxy.PublishThroughEventBusAsync(new UserEvent
                 {
                     UserId = 1,
-                    Name = "fanly"
+                    Name = ""
                 }).Wait();
 
                 var r = await userProxy.GetDictionary();
@@ -141,7 +141,7 @@ namespace Surging.Services.Client
             serviceProxyFactory.CreateProxy<IUserService>("User").PublishThroughEventBusAsync(new UserEvent()
             {
                 Age = 18,
-                Name = "fanly",
+                Name = "",
                 UserId = 1
             });
             Console.WriteLine("Press any key to exit...");
@@ -191,7 +191,7 @@ namespace Surging.Services.Client
             Dictionary<string, object> model = new Dictionary<string, object>();
             model.Add("user",new UserModel
             {
-                Name = "fanly",
+                Name = "",
                 Age =12,
                 UserId = 2,
                 Sex = Sex.Woman

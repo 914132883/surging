@@ -4,10 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <PackageId>Surging.WebSocketCore</PackageId>
     <Description>.NET CORE version based on websocket-sharp</Description>
-    <Authors>fanly</Authors>
-    <Company>fanly</Company>
+    <Authors></Authors>
+    <Company></Company>
     <Product>WebSocketCore Framework</Product>
-    <Copyright>Copyright © fanly All Rights Reserved.</Copyright>
+    <Copyright>Copyright ©  All Rights Reserved.</Copyright>
     <PackageLicenseUrl>https://github.com/dotnetcore/surging/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/dotnetcore/surging</PackageProjectUrl>
     <AssemblyVersion>1.9.2.0</AssemblyVersion>

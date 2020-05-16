@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-     <PackageId>$(PackagePrefix).Dapper</PackageId>
     <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
 	  <Description>封装通过Dapper组件,提供数据库访问</Description>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>

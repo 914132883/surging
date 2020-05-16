@@ -3,9 +3,9 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <PackageId>Surging.Core.ServiceHosting</PackageId>
-    <Copyright>Copyright © fanly All Rights Reserved.</Copyright>
-    <Version>1.1.0.0</Version>
-    <Authors>fanly</Authors>
+    <Copyright>Copyright ©  All Rights Reserved.</Copyright>
+    <Version>3.0.0</Version>
+    <Authors></Authors>
     <Company />
     <Product>surging Micro Service Framework</Product>
     <PackageReleaseNotes>1.multiple register center cluster
@@ -14,8 +14,8 @@
     <PackageLicenseUrl>https://github.com/dotnetcore/surging/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/dotnetcore/surging</PackageProjectUrl>
     <Description>surging is a distributed micro service framework that provides high-performance RPC remote service calls, using Zookeeper, Consul as the registration center for surging services, integrating hash, random, polling as a load balancing algorithm, RPC integration using the netty framework, Using asynchronous transmission. Use json.net, protobuf, messagepack for serialization Codec</Description>
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
-    <FileVersion>1.1.0.0</FileVersion>
+    <AssemblyVersion>3.0.0</AssemblyVersion>
+    <FileVersion>3.0.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
