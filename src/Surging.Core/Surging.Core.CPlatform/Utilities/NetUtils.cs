@@ -52,14 +52,12 @@ namespace Surging.Core.CPlatform.Utilities
 
         public static string GetAnyHostAddress()
         {
-            Console.WriteLine("获取");
             string result = "";
             NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();
             foreach (NetworkInterface adapter in nics)
             {
                 if (adapter.NetworkInterfaceType == NetworkInterfaceType.Ethernet)
                 {
-                    Console.WriteLine("获取ip开始");
                     IPInterfaceProperties ipxx = adapter.GetIPProperties();
                     UnicastIPAddressInformationCollection ipCollection = ipxx.UnicastAddresses;
                     foreach (UnicastIPAddressInformation ipadd in ipCollection)
@@ -67,7 +65,6 @@ namespace Surging.Core.CPlatform.Utilities
                         if (ipadd.Address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
                         {
                             result = ipadd.Address.ToString();
-                            Console.WriteLine("得到ip"+ result);
                         }
                     }
                 }
@@ -81,7 +78,6 @@ namespace Surging.Core.CPlatform.Utilities
             var result = hostAddress;
             if ((!IsValidAddress(hostAddress) && !IsLocalHost(hostAddress)) || IsAnyHost(hostAddress))
             {
-                Console.WriteLine("进入");
                 result = GetAnyHostAddress();
             }
             return result;
